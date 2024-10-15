@@ -406,7 +406,7 @@ function App(props) {
     <Layout className="app-layout">
       <Header className="app-header">
         <div className="app-header-left">
-          <a href="https://pion.ly" target="_blank">
+          <a href="" target="_blank">
             <img src={pionLogo} className="app-logo-img" />
           </a>
         </div>
@@ -556,7 +556,7 @@ function App(props) {
         ) : loading ? (
           <Spin size="large" tip="Connecting..." />
         ) : (
-          <Card title="Join to Ion" className="app-login-card">
+          <Card title="Join to Genius Class" className="app-login-card">
             <LoginForm handleLogin={handleJoin} />
           </Card>
         )}
