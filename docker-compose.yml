@@ -4,12 +4,12 @@ services:
   web:
     build: .
     ports:
-      - 9090:9090
+      - "9090:80"  # Map port 9090 on the host to port 80 in the container
     networks:
       - ionnet
     environment:
-    - WWW_URL=http://live.geniusclass.co.uk
-    - ADMIN_EMAIL=admin@live.geniusclass.co.uk
+      - WWW_URL=http://live.geniusclass.co.uk
+      - ADMIN_EMAIL=admin@live.geniusclass.co.uk
 
 networks:
   ionnet:
