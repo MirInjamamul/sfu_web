@@ -565,8 +565,8 @@ function App(props) {
       {!login && (
         <Footer className=".app-footer">
           Powered by{" "}
-          <a href="https://pion.ly" target="_blank">
-            Pion
+          <a href="" target="_blank">
+            Genius
           </a>{" "}
           WebRTC.
         </Footer>

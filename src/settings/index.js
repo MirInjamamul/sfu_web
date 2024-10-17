@@ -81,9 +81,15 @@ export default function MediaSettings(props) {
 
     const updateInputDevices = () => {
         return new Promise((pResolve, pReject) => {
+            if(!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
+                pReject(new Error("Media devices API not supported in this browser"));
+                return;
+            }
+
             let videoDevices = [];
             let audioDevices = [];
             let audioOutputDevices = [];
+            
             navigator.mediaDevices.enumerateDevices()
                 .then((devices) => {
                     for (let device of devices) {
@@ -98,6 +104,8 @@ export default function MediaSettings(props) {
                 }).then(() => {
                     let data = { videoDevices, audioDevices, audioOutputDevices };
                     pResolve(data);
+                }).catch((err)=>{
+                    pReject(err)
                 });
         });
     }
