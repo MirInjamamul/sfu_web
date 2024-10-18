@@ -93,7 +93,7 @@ function App(props) {
     // open chat window
     // openOrCloseLeftContainer(!collapsed);
     let url =
-      "http" +
+      window.location.protocol +
       "//" +
       window.location.hostname +
       ":" + "5551";
