@@ -99,7 +99,7 @@ function App(props) {
       ":" + "5551";
       // Note if you're running this inside docker you'll need to remove the ":5551" and possibly add the following line so that caddy can proxy correctly
       // + window.location.port;
-    console.log("Connect url:" + url);
+    console.log("Connect changed url:" + url);
     let connector = new Ion.Connector(url, "token");
     setConnector(connector);
    
