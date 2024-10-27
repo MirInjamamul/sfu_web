@@ -96,7 +96,7 @@ function App(props) {
       window.location.protocol +
       "//" +
       "server.geniusclass.co.uk"+
-      ":" + "5551";
+      ":" + "8443";
       // Note if you're running this inside docker you'll need to remove the ":5551" and possibly add the following line so that caddy can proxy correctly
       // + window.location.port;
     console.log("Connect changed url:" + url);
