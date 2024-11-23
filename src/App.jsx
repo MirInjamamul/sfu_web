@@ -93,8 +93,7 @@ function App(props) {
     // open chat window
     // openOrCloseLeftContainer(!collapsed);
     let url =
-      window.location.protocol +
-      "//" +
+      "wss//" +
       "live.geniusclass.co.uk"+
       ":" + "5551";
       // Note if you're running this inside docker you'll need to remove the ":5551" and possibly add the following line so that caddy can proxy correctly
